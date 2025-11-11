@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 import '../shared/constants/app_colors.dart';
 import '../shared/constants/game_constants.dart';
@@ -76,8 +77,10 @@ enum BalloonType {
   }
 
   /// ランダムな風船タイプを取得（Lv.1-5のみ）
+  static final _random = Random();
+
   static BalloonType random() {
-    final randomIndex = DateTime.now().microsecondsSinceEpoch % 5;
+    final randomIndex = _random.nextInt(5);
     return BalloonType.values[randomIndex];
   }
 }
