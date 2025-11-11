@@ -12,9 +12,9 @@ class StageConfigs {
     description: '基本的な操作を学ぼう',
     difficulty: 1,
     branches: [
-      // 木の幹(画面右端+60px)から左に伸びる水平な枝
+      // 木の幹(画面右端)から左に伸びる水平な枝
       BranchConfig(
-        xRatio: 0.75,
+        xRatio: 1.0, // 画面右端（木の幹の位置）
         yRatio: 0.5,
         lengthRatio: 0.4,
         angle: 0.0, // 水平
@@ -30,13 +30,13 @@ class StageConfigs {
     difficulty: 2,
     branches: [
       BranchConfig(
-        xRatio: 0.7,
+        xRatio: 1.0,
         yRatio: 0.35,
         lengthRatio: 0.35,
         angle: 0.0, // 水平
       ),
       BranchConfig(
-        xRatio: 0.7,
+        xRatio: 1.0,
         yRatio: 0.65,
         lengthRatio: 0.35,
         angle: 0.0, // 水平
@@ -52,19 +52,19 @@ class StageConfigs {
     difficulty: 3,
     branches: [
       BranchConfig(
-        xRatio: 0.65,
+        xRatio: 1.0,
         yRatio: 0.3,
         lengthRatio: 0.35,
         angle: 0.0,
       ),
       BranchConfig(
-        xRatio: 0.7,
+        xRatio: 1.0,
         yRatio: 0.5,
         lengthRatio: 0.4,
         angle: 0.0,
       ),
       BranchConfig(
-        xRatio: 0.65,
+        xRatio: 1.0,
         yRatio: 0.7,
         lengthRatio: 0.35,
         angle: 0.0,
@@ -80,25 +80,25 @@ class StageConfigs {
     difficulty: 4,
     branches: [
       BranchConfig(
-        xRatio: 0.6,
+        xRatio: 1.0,
         yRatio: 0.25,
         lengthRatio: 0.3,
         angle: 0.0,
       ),
       BranchConfig(
-        xRatio: 0.65,
+        xRatio: 1.0,
         yRatio: 0.4,
         lengthRatio: 0.35,
         angle: 0.0,
       ),
       BranchConfig(
-        xRatio: 0.65,
+        xRatio: 1.0,
         yRatio: 0.6,
         lengthRatio: 0.35,
         angle: 0.0,
       ),
       BranchConfig(
-        xRatio: 0.6,
+        xRatio: 1.0,
         yRatio: 0.75,
         lengthRatio: 0.3,
         angle: 0.0,
@@ -114,31 +114,31 @@ class StageConfigs {
     difficulty: 5,
     branches: [
       BranchConfig(
-        xRatio: 0.55,
+        xRatio: 1.0,
         yRatio: 0.2,
         lengthRatio: 0.3,
         angle: 0.0,
       ),
       BranchConfig(
-        xRatio: 0.6,
+        xRatio: 1.0,
         yRatio: 0.35,
         lengthRatio: 0.35,
         angle: 0.0,
       ),
       BranchConfig(
-        xRatio: 0.65,
+        xRatio: 1.0,
         yRatio: 0.5,
         lengthRatio: 0.4,
         angle: 0.0,
       ),
       BranchConfig(
-        xRatio: 0.6,
+        xRatio: 1.0,
         yRatio: 0.65,
         lengthRatio: 0.35,
         angle: 0.0,
       ),
       BranchConfig(
-        xRatio: 0.55,
+        xRatio: 1.0,
         yRatio: 0.8,
         lengthRatio: 0.3,
         angle: 0.0,
