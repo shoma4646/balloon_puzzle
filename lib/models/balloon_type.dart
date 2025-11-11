@@ -77,9 +77,10 @@ enum BalloonType {
   }
 
   /// ランダムな風船タイプを取得（Lv.1-5のみ）
+  static final _random = Random();
+
   static BalloonType random() {
-    final random = Random();
-    final randomIndex = random.nextInt(5);
+    final randomIndex = _random.nextInt(5);
     return BalloonType.values[randomIndex];
   }
 }
