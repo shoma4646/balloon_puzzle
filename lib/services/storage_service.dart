@@ -1,10 +1,13 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+part 'storage_service.g.dart';
+
 /// ローカルストレージサービスのプロバイダー
-final storageServiceProvider = Provider<StorageService>((ref) {
+@riverpod
+StorageService storageService(StorageServiceRef ref) {
   return StorageService();
-});
+}
 
 /// ローカルストレージサービス
 class StorageService {

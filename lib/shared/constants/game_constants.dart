@@ -43,7 +43,7 @@ class GameConstants {
   static const int balloonPreviewCount = 3;
 
   // 風船配置の制限
-  static const double balloonSpawnCooldown = 2.0; // 風船配置のクールダウン（秒）
+  static const double balloonSpawnCooldown = 1.0; // 風船配置のクールダウン（秒）
 
   // 画面サイズ関連
   static const double gameCanvasRatio = 0.75; // ゲームキャンバスの画面比率

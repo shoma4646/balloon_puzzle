@@ -1,12 +1,16 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../models/game_state.dart';
 import '../models/game_status.dart';
-import '../models/balloon_type.dart';
-import '../shared/constants/game_constants.dart';
+
+part 'game_state_provider.g.dart';
 
 /// ゲーム状態を管理するプロバイダー
-class GameStateNotifier extends StateNotifier<GameState> {
-  GameStateNotifier() : super(GameState.initial());
+@riverpod
+class GameStateNotifier extends _$GameStateNotifier {
+  @override
+  GameState build() {
+    return GameState.initial();
+  }
 
   /// ゲームを開始
   void startGame() {
@@ -57,8 +61,3 @@ class GameStateNotifier extends StateNotifier<GameState> {
     state = GameState.initial();
   }
 }
-
-/// ゲーム状態プロバイダー
-final gameStateProvider = StateNotifierProvider<GameStateNotifier, GameState>(
-  (ref) => GameStateNotifier(),
-);

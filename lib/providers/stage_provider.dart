@@ -1,10 +1,13 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 import '../models/stage_data.dart';
 import '../shared/constants/stage_configs.dart';
 import '../services/storage_service.dart';
 
+part 'stage_provider.g.dart';
+
 /// ステージ一覧を提供するプロバイダー
-final stageListProvider = FutureProvider<List<StageData>>((ref) async {
+@riverpod
+Future<List<StageData>> stageList(StageListRef ref) async {
   final storageService = ref.watch(storageServiceProvider);
   final stages = <StageData>[];
 
@@ -19,10 +22,11 @@ final stageListProvider = FutureProvider<List<StageData>>((ref) async {
   }
 
   return stages;
-});
+}
 
 /// 特定のステージデータを提供するプロバイダー
-final stageProvider = FutureProvider.family<StageData, int>((ref, stageNumber) async {
+@riverpod
+Future<StageData> stage(StageRef ref, int stageNumber) async {
   final storageService = ref.watch(storageServiceProvider);
   final stage = StageConfigs.getStage(stageNumber);
 
@@ -33,4 +37,4 @@ final stageProvider = FutureProvider.family<StageData, int>((ref, stageNumber) a
     highScore: highScore,
     highCombo: highCombo,
   );
-});
+}
