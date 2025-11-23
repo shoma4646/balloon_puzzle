@@ -172,9 +172,6 @@ class BalloonPuzzleGame extends Forge2DGame with PanDetector {
     if (_aimPosition != null && _canSpawnBalloon()) {
       _spawnBalloon(_aimPosition!);
       _lastBalloonSpawnTime = _elapsedTime;
-      print('✅ Balloon spawned at $_elapsedTime');
-    } else if (_aimPosition != null) {
-      print('❌ Spawn blocked (cooldown)');
     }
 
     _isAiming = false;
@@ -272,12 +269,6 @@ class BalloonPuzzleGame extends Forge2DGame with PanDetector {
     final finalScore = (baseScore * multiplier).round();
 
     _addScore(finalScore);
-
-    // コンボログ出力
-    if (_comboSystem.comboCount > 1) {
-      print(
-          'Combo: ${_comboSystem.comboCount} (x${multiplier.toStringAsFixed(1)})');
-    }
   }
 
   /// 風船が消えた時の処理（Lv.8風船）
@@ -338,6 +329,9 @@ class BalloonPuzzleGame extends Forge2DGame with PanDetector {
         // BGM停止とゲームオーバーSE再生
         AudioService().stopBgm();
         AudioService().playSe('sfx/game_over.mp3');
+
+        // コンボシステムをリセット
+        _comboSystem.reset();
 
         onGameOver();
       }

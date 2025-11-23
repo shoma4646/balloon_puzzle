@@ -99,6 +99,9 @@ class _GameScreenState extends ConsumerState<GameScreen> {
 
   void _startTimer() {
     _timer = Timer.periodic(const Duration(milliseconds: 50), (timer) {
+      // コンポーネントが破棄されている場合は処理をスキップ
+      if (!mounted) return;
+
       setState(() {
         _elapsedTime += 0.05;
       });
