@@ -1,0 +1,10 @@
+{
+  "prompt": "simple white fluffy cloud, cartoon cloud, cute cloud illustration, white cloud on blue sky, 2d game art, flat design, soft edges, masterpiece, best quality",
+  "negative_prompt": "realistic, photograph, 3d, complex, detailed, dark background, black, gray, storm, rain, shadow",
+  "steps": 20,
+  "width": 512,
+  "height": 256,
+  "cfg_scale": 7,
+  "sampler_name": "DPM++ 2M Karras",
+  "seed": 12345
+}

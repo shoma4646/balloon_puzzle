@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'shared/theme/app_theme.dart';
-import 'features/title/title_screen.dart';
+import 'core/presentation/theme/app_theme.dart';
+import 'features/title/presentation/screens/title_screen.dart';
 
 void main() {
   runApp(

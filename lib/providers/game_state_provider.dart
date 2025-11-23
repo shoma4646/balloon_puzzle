@@ -1,6 +1,6 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import '../models/game_state.dart';
-import '../models/game_status.dart';
+import '../features/game/domain/entities/game_state.dart';
+import '../features/game/domain/entities/game_status.dart';
 
 part 'game_state_provider.g.dart';
 
