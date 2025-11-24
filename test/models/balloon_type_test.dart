@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:balloon_puzzle/models/balloon_type.dart';
+import 'package:balloon_puzzle/features/game/domain/entities/balloon_type.dart';
 
 void main() {
   group('BalloonType.random()', () {
@@ -20,7 +20,7 @@ void main() {
     test('レベル6-8を返さないこと', () {
       for (var i = 0; i < 50; i++) {
         final balloon = BalloonType.random();
-        expect(balloon.level, lessThanOrEqual(5));
+        expect(balloon.level, lessThanOrEqualTo(5));
       }
     });
 

@@ -1,7 +1,7 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import '../models/stage_data.dart';
-import '../shared/constants/stage_configs.dart';
-import '../services/storage_service.dart';
+import '../core/domain/entities/stage_data.dart';
+import '../core/constants/stage_configs.dart';
+import '../core/data/local/storage_service.dart';
 
 part 'stage_provider.g.dart';
 
