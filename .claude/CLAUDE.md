@@ -5,7 +5,7 @@
 **説明**: 風船パズルゲーム - 上昇する風船をマージして高得点を目指すFlutterゲーム
 **プラットフォーム**: Android, iOS, Web, Linux, macOS, Windows
 **Dart SDK**: >=3.6.0 <4.0.0
-**Flutter**: 3.27.0
+**Flutter**: 3.27.1
 
 ---
 
